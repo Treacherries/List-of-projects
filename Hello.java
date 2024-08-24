@@ -28,6 +28,5 @@ public class Hello {
     }
     
 }
-}
 // Really proud of this one since I didn't use a video tutorial! 
 // I hope I'll stay like this :)
