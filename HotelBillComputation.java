@@ -3,7 +3,7 @@ package Final_Project;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
-public class DeLeon14 {
+public class HotelBillComputation {
     static Scanner user = new Scanner(System.in);
         static DecimalFormat twodec = new DecimalFormat("0.00");
         static double std = 1800.00; 
