@@ -6,10 +6,7 @@ import java.text.DecimalFormat;
 public class HotelBillComputation {
     static Scanner user = new Scanner(System.in);
         static DecimalFormat twodec = new DecimalFormat("0.00");
-        static double std = 1800.00; 
-        static double dxl = 2300.00;
-        static double sui = 3000.00; 
-        static double tax = 0.12;
+        static double std = 1800.00, dxl = 2300.00, sui = 3000.00, tax = 0.12;
 
         public static void main(String[] args) {
 
