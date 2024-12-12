@@ -66,9 +66,11 @@ public class HotelBillComputation {
             while(true){
                     double std_total = std*input3*input2;
 
+                    System.out.println("=======================================\n");
                     System.out.println("Room price             : " + twodec.format(std_total));
                     System.out.println("VAT tax                : " + twodec.format(tax*std_total));
-                    System.out.println("\nTotal bill             : \n" + twodec.format(std_total + tax));
+                    System.out.println("\nTotal bill             : " + twodec.format(std_total + tax));
+                    System.out.println();
                     return;
                     }
                     
@@ -101,10 +103,12 @@ public class HotelBillComputation {
                         double vat = tax * (dxl_total + extraCharge);
                         double totalBill = dxl_total + extraCharge + vat;
         
+                        System.out.println("=======================================\n");
                         System.out.println("Room price             : " + twodec.format(dxl_total));
                         System.out.println("Additional charge      : " + twodec.format(extraCharge));
                         System.out.println("VAT tax                : " + twodec.format(vat));
-                        System.out.println("\nTotal bill             : \n" + twodec.format(totalBill));
+                        System.out.println("\nTotal bill             : " + twodec.format(totalBill));
+                        System.out.println();
                         return;
                     }
                 }
@@ -142,10 +146,12 @@ public class HotelBillComputation {
                         double vat = tax * (sui_total + extraCharge);
                         double totalBill = sui_total + extraCharge + vat;
 
+                        System.out.println("=======================================\n");
                         System.out.println("Room price             : " + twodec.format(sui_total));
                         System.out.println("Additional charge      : " + twodec.format(extraCharge));
                         System.out.println("VAT tax                : " + twodec.format(vat));
-                        System.out.println("\nTotal bill             : \n" + twodec.format(totalBill));
+                        System.out.println("\nTotal bill             : " + twodec.format(totalBill));
+                        System.out.println();
                         return;
                     }
                 }
