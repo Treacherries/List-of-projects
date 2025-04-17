@@ -6,6 +6,10 @@ public class draft {
     static Scanner input = new Scanner(System.in);
     static ArrayList<String> students = new ArrayList<>();
 
+    static String name;
+    static String sn;
+    static String course;
+
     public static void Main_menu(){
         /*Create an if statement here where if theres no students inside make edit and delete option unavailable and available if there is (done) */
 
@@ -31,13 +35,13 @@ public class draft {
     public static void Create_User(){
         /*figure a way to store it (done)*/
         System.out.print("Name: ");
-        String name = input.nextLine();
+        name = input.nextLine();
 
         System.out.print("Student Number: ");
-        String sn = input.nextLine();
+        sn = input.nextLine();
 
         System.out.print("Course: ");
-        String course = input.nextLine();
+        course = input.nextLine();
 
         String studentInfo = (name + "\t\t" + sn + "\t\t" + course );
         students.add(new String(studentInfo));
@@ -52,12 +56,45 @@ public class draft {
         for(int i = 0; i < students.size(); i++){
             System.out.println( i + "\t" + students.get(i) );
         }
+        Redirect();
     }
 
     public static void Edit_Students(){
-        System.out.println();
         System.out.println("Enter the No. to edit: ");
-        String ado = input.nextLine();
+        String ado = input.nextLine();  
+        System.out.println();
+
+        for(int i = 0; i<students.size(); i++){
+            if(ado.equals(i)){
+                String choice = "";
+                System.out.println("Which would you like to edit: ");
+                System.out.println("1. Name\t 2. Student Number \t3. Course\t4. Exit");
+
+                switch(choice){
+                    case "1":
+                    System.out.println("Input: ");
+                    name = input.nextLine();
+                    System.out.println("Name has successfully edited!");
+                    break;
+
+                    case "2":
+                    System.out.println("Input: ");
+                    sn = input.nextLine();
+                    System.out.println("Student Number has successfully edited!");
+                    break;
+
+                    case "3":
+                    System.out.println("Input: ");
+                    course = input.nextLine();
+                    System.out.println("Course has successfully edited!");
+                    break;
+
+                    case "4":
+                    System.out.println("Exitting...");
+                    break;
+                }
+            }
+        }
     }
 
     public static void Remove_Students(){
@@ -94,7 +131,7 @@ public class draft {
 
             case "3":
             if(!students.isEmpty()){
-
+                Edit_Students();
             }
             else{
                 System.out.println("There is no Student avaliable!\n");
